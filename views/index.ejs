@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapid E-BusPass</title>
+    <style>
+        .a {
+            text-align: center;
+            color: black;
+            font-size: 30px;
+        }
+
+        .b {
+            background-color: greenyellow;
+            margin: 80px;
+            padding: 60px;
+            border-radius: 15px;
+        }
+
+        .c {
+            padding: 5px;
+            position: relative;
+            top: -70px;
+        }
+
+        table {
+            font-family: Arial, sans-serif;
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            text-align: left;
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <% if (dataa && dataa.length > 0) { %>
+        <% dataa.forEach(function(item) { %>
+            <div class="b">
+                <div class="a">
+                    ANIL NEERUKONDA INSTITUTE OF TECHNOLOGY AND SCIENCES
+                </div>
+                <br><br>
+                <center class="a">Bus Pass</center>
+                <table class="c">
+                    <tr>
+                        <td>Pass id</td>
+                        <td><%= item._id %></td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td><%= item.Name %></td>
+                    </tr>
+                    <tr>
+                        <td>Year</td>
+                        <td><%= item.Year %></td>
+                    </tr>
+                    <tr>
+                        <td>Branch</td>
+                        <td><%= item.Branch %></td>
+                    </tr>
+                    <tr>
+                        <td>Roll no</td>
+                        <td><%= item.rollno %></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><%= item.Email %></td>
+                    </tr>
+                    <tr>
+                        <td>Boarding At</td>
+                        <td><%= item.Route %></td>
+                    </tr>
+                    <tr>
+                        <td>Bus No</td>
+                        <td><%= item.busno %></td>
+                    </tr>
+                    <tr>
+                        <td>Validity</td>
+                        <td>Six Months</td>
+                    </tr>
+                </table>
+            </div>
+        <% }); %>
+    <% } %>
+
+</body>
+
+</html>
